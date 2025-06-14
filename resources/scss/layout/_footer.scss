@@ -1,0 +1,8 @@
+@use '@/scss/base/variables' as v;
+
+footer {
+  background-color: v.$dark-color;
+	p {
+		color: v.$primary-color;
+	}
+}

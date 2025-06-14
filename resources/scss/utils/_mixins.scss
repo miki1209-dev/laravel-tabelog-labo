@@ -1,0 +1,13 @@
+@use '@/scss/base/variables' as v;
+
+@mixin sp {
+	@media (max-width: v.$breakpoint-sp) {
+		@content;
+	}
+}
+
+@mixin pc {
+	@media (max-width: v.$breakpoint-pc) {
+		@content;
+	}
+}

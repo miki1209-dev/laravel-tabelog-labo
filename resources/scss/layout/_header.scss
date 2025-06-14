@@ -1,0 +1,5 @@
+@use '@/scss/base/variables' as v;
+
+header {
+  background-color: v.$primary-color;
+}

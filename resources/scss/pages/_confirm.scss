@@ -1,0 +1,20 @@
+@use '@/scss/base/variables' as v;
+.reservation {
+	display: block;
+	margin-bottom: 1rem;
+	&__list {
+		background-color: v.$primary-color;
+	}
+
+	&__item {
+		background-color: v.$primary-color;
+		border-left: 0;
+		border-right: 0;
+		font-size: 1rem;
+		strong {
+      display: inline-block;
+      min-width: 6rem;
+      color: #333;
+    }
+	}
+}

@@ -1,0 +1,81 @@
+@use '@/scss/base/variables' as v;
+@use '@/scss/utils/mixins' as *;
+.review {
+	&__section {
+		margin-top: 1.5rem;
+	}
+	&__list {
+		padding-left: 1rem;
+		min-height: 470px;
+		@include sp {
+			min-height: 180px;
+			padding-left: 0;
+		}
+
+		.review-card {
+			background-color: #ffffff;
+			border: 1px solid v.$border-primary;
+			border-radius: 0.5rem;
+			padding: 1.25rem 1.5rem;
+			transition: box-shadow 0.3s ease;
+			&:hover {
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+			}
+
+			&__header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 0.5rem;
+			}
+
+			&__title {
+				font-size: 1.1rem;
+				color: v.$dark-color;
+			}
+
+			&__date {
+				font-size: 0.875rem;
+				color: #888;
+			}
+
+			&__score {
+				color: v.$accent-color-secondary;
+				font-size: 0.9rem;
+			}
+
+			&__content {
+				font-size: 1rem;
+				line-height: 1.6;
+				color: #444;
+				margin-bottom: 0.75rem;
+			}
+
+			&__author {
+				font-size: 0.85rem;
+				color: #999;
+			}
+
+			&__actions {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	&--none {
+		text-align: center;
+	}
+
+	&__pagination {
+		padding-left: 2rem;
+		@include sp {
+			padding-left: 0;
+		}
+		.pagination {
+			@include sp {
+			margin-bottom: 0;
+		}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+@use '@/scss/base/variables' as v;
+@use './form';
+
+#card-element {
+	@extend .form__input;
+	padding: 0.75rem;
+}
+
+#card-element.StripeElement--focus {
+	border-color: v.$accent-color-tertiary;
+}

@@ -1,0 +1,52 @@
+
+@use '@/scss/base/variables' as v;
+.form {
+	background-color: #fdfdfd;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	border: 1px solid v.$border-primary;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+	&__group {
+		margin-bottom: 1.5rem;
+	}
+	&__label {
+		font-weight: 600;
+		font-size: 0.95rem;
+		color: v.$dark-color;
+	}
+	&__input,
+	&__select,
+	&__textarea {
+		border-radius: 0.375rem;
+		border: 1px solid v.$border-primary;
+		transition: border-color 0.2s ease;
+		&:focus {
+			border-color: v.$accent-color-tertiary;
+			color: v.$accent-color-secondary;
+			box-shadow: none;
+		}
+	}
+
+	&__input--muted,
+	&__select--muted,
+	&__textarea--muted
+	{
+		&:focus {
+			color: v.$dark-color;
+		}
+	}
+
+	&__select--accent {
+		color: v.$accent-color-secondary;
+	}
+	&__input.is-invalid,
+	&__select.is-invalid,
+	&__textarea.is-invalid {
+		border-radius: 0.375rem;
+		border: 1px solid v.$border-danger;
+		transition: border-color 0.2s ease;
+		&:focus {
+			border-color: v.$accent-color-tertiary;
+		}
+	}
+}

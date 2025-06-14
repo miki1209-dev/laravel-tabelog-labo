@@ -1,0 +1,10 @@
+@use '@/scss/base/variables' as v;
+.required-mark {
+	color: v.$primary-color;
+	font-size: 0.8rem;
+	padding: 0.2rem;
+	border-radius: 3px;
+	&--required {
+		background-color: v.$accent-color;
+	}
+}

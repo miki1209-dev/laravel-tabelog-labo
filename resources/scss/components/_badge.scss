@@ -1,0 +1,13 @@
+@use '@/scss/base/variables' as v;
+.badge {
+	&__category {
+  	display: inline-block;
+  	background-color: v.$accent-color-secondary;
+  	color: #fff;
+  	padding: 0.35em 0.75em;
+  	font-size: 0.75rem;
+  	border-radius: 7px;
+  	margin-right: 0.25rem;
+  	line-height: 1.2;
+	}
+}

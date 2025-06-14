@@ -1,0 +1,39 @@
+@use '@/scss/base/variables' as v;
+h1 {
+	color: v.$primary-color;
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+h2, h3, h4, h5, h6 {
+	color: v.$dark-color;
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+p {
+	color: v.$dark-color;
+	font-size: 1rem;
+	line-height: 1.6;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: v.$dark-color;
+	text-decoration: none;
+	transition: 0.3s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.link--style {
+	font-size: 0;
+}
+
+label {
+	color: v.$dark-color;
+	font-weight: 500;
+}

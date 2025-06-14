@@ -1,0 +1,32 @@
+@use '@/scss/base/variables' as v;
+.star-rating {
+	position: relative;
+	display: inline-block;
+	font-size: 1rem;
+	color: v.$dark-color;
+	&::before,
+	&::after {
+		content: "★★★★★";
+		letter-spacing: 0.1rem;
+	}
+
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: v.$accent-color-secondary;
+		overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+	}
+	&[data-rate="0.5"]::after { width: 10%; }
+	&[data-rate="1"]::after { width: 20%; }
+	&[data-rate="1.5"]::after { width: 30%; }
+	&[data-rate="2"]::after { width: 40%; }
+	&[data-rate="2.5"]::after { width: 50%; }
+	&[data-rate="3"]::after { width: 60%; }
+	&[data-rate="3.5"]::after { width: 70%; }
+	&[data-rate="4"]::after { width: 80%; }
+	&[data-rate="4.5"]::after { width: 90%; }
+	&[data-rate="5"]::after { width: 100%; }
+}

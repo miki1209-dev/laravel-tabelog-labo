@@ -1,0 +1,29 @@
+// 基本設定
+@use '@/scss/base/global';
+@use '@/scss/base/typography';
+@use '@/scss/base/variables';
+
+// レイアウト
+@use '@/scss/layout/header';
+@use '@/scss/layout/footer';
+
+// コンポーネント
+@use '@/scss/components/buttons';
+@use '@/scss/components/form';
+@use '@/scss/components/cards';
+@use '@/scss/components/pagination';
+@use '@/scss/components/star-rating';
+@use '@/scss/components/required-mark';
+@use '@/scss/components/stripe-form';
+@use '@/scss/components/flash-message';
+@use '@/scss/components/badge';
+
+// ページ固有のスタイル
+@use '@/scss/pages/home';
+@use '@/scss/pages/shop';
+@use '@/scss/pages/mypage';
+@use '@/scss/pages/review';
+@use '@/scss/pages/confirm';
+
+// mixin ブレークポイント
+@use  '@/scss/utils/mixins';

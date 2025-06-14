@@ -1,0 +1,98 @@
+@use '@/scss/base/variables' as v;
+@use '@/scss/utils/mixins' as *;
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.hero {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	@include sp {
+		height: 50vh;
+	}
+
+	&__slider {
+		height: 100%;
+		.slick-slide {
+			height: 100%;
+		}
+	}
+
+	&__slide {
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		&--1 {
+			background-image: url('@img/slide-1.jpg');
+		}
+		&--2 {
+			background-image: url('@img/slide-2.jpg');
+		}
+		&--3 {
+			background-image: url('@img/slide-3.jpg');
+		}
+		&--4 {
+			background-image: url('@img/slide-4.jpg');
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(v.$dark-color, 0.3);
+			z-index: 1;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+		color: v.$primary-color;
+		z-index: 2;
+		@include sp {
+			padding: 0 1rem;
+		}
+	}
+
+	&__title {
+		font-size: 3rem;
+		text-shadow: 2px 2px 5px rgba(v.$dark-color, 0.7);
+		@include sp {
+			font-size: 2.3rem;
+			line-height: 1.2;
+		}
+	}
+
+	&__subtitle {
+		font-size: 1.5rem;
+		margin-bottom: 0;
+		color: v.$primary-color;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+		@include sp {
+			font-size: 1.2rem;
+			line-height: 1.2;
+		}
+	}
+}
+
+.search {
+	&__block {
+		background-color: #efefef;
+	}
+}
